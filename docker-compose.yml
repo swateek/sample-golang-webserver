@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+    server:
+        image: sample-golang-webserver
+        container_name: sample-golang-webserver
+        ports:
+            - 8000:8000
+        networks:
+            - sample-network
+
+networks:
+    sample-network:
+        name: sample-network
+        driver: bridge
